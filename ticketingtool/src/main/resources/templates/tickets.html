@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <!-- Add your HTML head content here -->
+</head>
+<body>
+    <h1>Tickets</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Customer Name</th>
+                <th>Description</th>
+                <th>Status</th>
+                <th>Priority</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="ticket : ${tickets}">
+                <td th:text="${ticket.customerName}"></td>
+                <td th:text="${ticket.ticketDescription}"></td>
+                <td th:text="${ticket.ticketStatus}"></td>
+                <td th:text="${ticket.ticketPriority}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

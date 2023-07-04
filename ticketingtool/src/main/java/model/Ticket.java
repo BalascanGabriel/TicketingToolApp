@@ -12,6 +12,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name = "tickets")
@@ -45,6 +46,85 @@ public class Ticket {
 
     @Column(name = "updated_at", nullable = false)
     private LocalDateTime updatedAt;
+
+	public Long getTicketId() {
+		return ticketId;
+	}
+
+	public void setTicketId(Long ticketId) {
+		this.ticketId = ticketId;
+	}
+
+	public String getCustomerName() {
+		return customerName;
+	}
+
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+
+	public String getTicketDescription() {
+		return ticketDescription;
+	}
+
+	public void setTicketDescription(String ticketDescription) {
+		this.ticketDescription = ticketDescription;
+	}
+
+	public TicketStatus getTicketStatus() {
+		return ticketStatus;
+	}
+
+	public void setTicketStatus(TicketStatus ticketStatus) {
+		this.ticketStatus = ticketStatus;
+	}
+
+	public TicketPriority getTicketPriority() {
+		return ticketPriority;
+	}
+
+	public void setTicketPriority(TicketPriority ticketPriority) {
+		this.ticketPriority = ticketPriority;
+	}
+
+	public Administrator getAssignedTo() {
+		return assignedTo;
+	}
+
+	public void setAssignedTo(Administrator assignedTo) {
+		this.assignedTo = assignedTo;
+	}
+
+	public LocalDateTime getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(LocalDateTime createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public LocalDateTime getUpdatedAt() {
+		return updatedAt;
+	}
+
+	public void setUpdatedAt(LocalDateTime updatedAt) {
+		this.updatedAt = updatedAt;
+	}
+
+	public Ticket(Long ticketId, String customerName, String ticketDescription, TicketStatus ticketStatus,
+			TicketPriority ticketPriority, Administrator assignedTo, LocalDateTime createdAt, LocalDateTime updatedAt) {
+		super();
+		this.ticketId = ticketId;
+		this.customerName = customerName;
+		this.ticketDescription = ticketDescription;
+		this.ticketStatus = ticketStatus;
+		this.ticketPriority = ticketPriority;
+		this.assignedTo = assignedTo;
+		this.createdAt = createdAt;
+		this.updatedAt = updatedAt;
+	}
+
+
 
     // Constructors, getters, and setters
 
