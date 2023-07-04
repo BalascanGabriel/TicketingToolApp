@@ -8,7 +8,7 @@ import model.Ticket;
 import model.TicketPriority;
 import model.TicketStatus;
 
-public interface TicketRepository extends CrudRepository<Ticket, Integer> {
+public interface TicketRepository extends CrudRepository<Ticket, Long> {
 
     // Additional query methods can be declared here if needed
 	  List<Ticket> findByTicketStatus(TicketStatus status);

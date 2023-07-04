@@ -22,7 +22,7 @@ public class TicketService {
         return ticketRepository.findAll();
     }
     
-    public Ticket getTicketById(int id) {
+    public Ticket getTicketById(Long id) {
         return ticketRepository.findById(id).orElse(null);
     }
     
